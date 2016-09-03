@@ -1,0 +1,235 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+body h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+body p{
+    font-family: 'Roboto', sans-serif;
+}
+.topnav {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    background-color: transparent;
+    color: white;
+    transition: all 0.25s ease;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+}
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+ul.topnav li {
+    float: left;
+}
+.topnav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+}
+.topnav a:hover {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #FACD00;
+}
+.changeStyle {
+    background-color: white;
+    border-bottom: solid;
+    color: #19CEC4;
+}
+.changeStyle a {
+    text-decoration: none;
+    color: #19CEC4;
+}
+.toggle {
+    color: #FACD00;
+    display: none;
+}
+.jumbotron p {
+    font-weight: 400;
+    font-family: 'roboto', sans-serif;
+}
+#jumbotronImg {
+    background-image: url(img/jumboImg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    color: white;
+    margin-bottom: none;
+}
+.jumbotron h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 199;
+    /* Sit on top */
+    padding-top: 150px;
+    /* Location of the box */
+    padding-left: 100px;
+    padding-right:100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(25, 206, 196, .75)/* Black w/ opacity */
+}
+
+/* Modal Content */
+
+div.modal-content {
+    position: relative;
+    background-color: white;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
+    -o-box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
+    outline:none;
+    border:none !important;
+}
+.modal-header {
+    font-family: 'Montserrat', sans-serif;
+    padding: 2px 16px;
+    color: #FACD00;
+}
+.modal-body {
+    font-size: 1.25em;
+    padding: 2px 16px;
+}
+#events h1 {
+    color: #19CEC4;
+}
+.center {
+    text-align: center;
+}
+
+.eventContain {
+    position: relative;
+    margin-bottom: 15px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-size: cover;
+    cursor: pointer;
+}
+#events p{
+    font-size: 1.25em;
+}
+.eventContents {
+    color: white;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.eventContents h2 {
+    font-size: 2em;
+    font-family: 'Montserrat', sans-serif;
+}
+.eventContents p {
+    font-size: 1.25em;
+    font-family: 'Roboto', sans-serif;
+}
+@media screen and (min-width: 800px) {
+    #helper {
+        display: none;
+        visibility: hidden;
+    }
+    #myMenu {
+        display: none;
+        visibility: hidden;
+    }
+    .grid{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
+@media screen and (max-width: 800px) {
+    ul.topnav li:not(:first-child) {
+        display: none;
+    }
+    .toggle {
+        color: #FACD00;
+        font-size: 20px;
+        margin: 20px;
+        margin-top: 30px;
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 100;
+    }
+    .toggle a {
+        color: #FACD00;
+        text-decoration: none;
+    }
+    .toggle a:hover {
+        color: #FACD00;
+        text-decoration: none;
+    }
+    .menu {
+        z-index: 99;
+        background-color: rgba(25, 206, 196, .95);
+        display: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+    }
+    .menu ul {
+        list-style-type: none;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 25px;
+        display: block;
+    }
+    .menu ul li {
+        padding: 15px;
+        vertical-align: middle;
+    }
+    .menu a {
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+    }
+    .menu a:hover {
+        text-decoration: none;
+        color: #FACD00;
+        cursor: pointer;
+    }
+    #helper {
+        z-index: 99;
+        display: none;
+    }
+    .hamburger {}
+    .modal {
+        padding-top: 100px;
+        padding-left: 10px;
+    padding-right:10px;
+    }
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>UYC</title>
+
+    <meta charset="utf-8" />
+
+    <link rel="shortcut icon" href="icon.ico" type='image/x-icon' />
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="animate.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <script type="text/javascript" src="main.js"></script>
+
+</head>
+
+<body>
+
+
+    <section id="home">
+        <div class="jumbotron" id="jumbotronImg">
+            <div class=container>
+                <h1 class="whiteTitle">Hi there!</h1>
+                <p class="bp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat nibh ut fringilla imperdiet. Suspendisse potenti. Sed suscipit interdum ante eget ornare. Donec porttitor eros quam, eget fermentum neque sodales vel. Aenean fringilla id nisl nec finibus. Vivamus elementum lorem a mattis efficitur. </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="mTitle">Modal Header</h2>
+            </div>
+            <div class="modal-body">
+                <p id="mText">Some text in the Modal Body</p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        var vtitle = [
+            "Olde Thyme Christmas",
+            "Spring Carnival",
+            "Leadership Conference",
+            "30 Hour Famine",
+            "Markham Idol"
+        ]
+        var vtext = [
+                "As one of the events affiliated with the Christmas celebration on Unionville Main Street, Old Tyme Christmas welcomes the local community to Crosby Community Centre for a free skate, popcorn and hot chocolate.",
+                "Held at the Angus Glen Community Centre, the Spring Carnival is targeted towards younger children who are looking for some early summer fun. Activities include hair braiding, balloon animals & face painting and popcorn & cotton candy are also sold. The aim of this event is to spread awareness for certain causes or events. We also use the opportunity to collect donations for charity.",
+                "The Leadership Conference brings together markham youths of tomorrow to discuss the importance of becoming involved in the local and global community and how each person can make a difference, no matter how big or small it is. Guests are invited to speak about the leadership aspects in their jobs as well as volunteer opportunities they offer.",
+                "Every April, our council works together with World Vision and thousands of people all across the world to raise money for those living in poverty. They do this while experiencing what it is like to not have anything to eat by fasting for 30 hours. During this event, both people who are struggling and our members benefit.",
+                "One of our biggest events of the year, Markham Idol is a friendly singing competition for youths aged 8 to 16 years old.  We aim to provide a safe stage for youths to share their talents and express their creativity.  In this event, we hope that they develop the confidence to become exceptional leaders of tomorrow."
+
+
+
+            ]
+            // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+
+        // When the user clicks the button, open the modal
+
+        function moreInfo(num) {
+            $("#mTitle").text(vtitle[num])
+            $("#mText").text(vtext[num]);
+            $("#myModal").fadeToggle(500);
+            // modal.style.display = "block";
+        }
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                $("#myModal").fadeToggle(500);
+            }
+        }
+
+    </script>
+
+
+    <section id="events" class="grid">
+        <div class="container">
+            <h1 class="center">Upcoming Events</h1>
+            <p class="center">Here is a collection of all the events we run across the community, feel free to join us! Click on an event to veiw details.</p>
+        </div>
+        <!--row1-->
+        <row>
+            <div class="col-sm-4">
+                <div class="eventContain" style="background-image:url(img/events/leaf.jpg)" onclick="moreInfo(0)">
+                    <div class="eventContents">
+                        <h2 class="eventName">Olde Thyme Christmas</h2>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="eventContain" style="background-image:url(img/events/12.jpg)" onclick="moreInfo(1)">
+                    <div class="eventContents">
+                        <h2 class="eventName">Spring Carnival</h2>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="eventContain" style="background-image:url(img/events/1.jpg)" onclick="moreInfo(2)">
+                    <div class="eventContents">
+                        <h2 class="eventName">Leadership Conference</h2>
+
+                    </div>
+                </div>
+            </div>
+        </row>
+        <!--row2-->
+        <row>
+            <div class="col-sm-4">
+                <div class="eventContain" style="background-image:url(img/events/leaf.jpg)" onclick="moreInfo(3)">
+                    <div class="eventContents">
+                        <h2 class="eventName">30 Hour Famine</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="eventContain" style="background-image:url(img/events/12.jpg)" onclick="moreInfo(4)">
+                    <div class="eventContents">
+                        <h2 class="eventName">Markham Idol</h2>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="eventContain" style="background-color:#19CEC4">
+                    <div class="eventContents">
+                        <h2 class="eventName">More Comming Soon!</h2>
+                    </div>
+                </div>
+            </div>
+        </row>
+    </section>
+    
+    <section id = "about">
+        <row>
+            <div class = "col-sm-7" style= "background-image:url(img/about.png)">
+            </div>
+            <div class = "col-sm-5">
+            </div>
+        </row>
+    </section>
+
+    <!--navbar-->
+    <!--top navbar for non-mobile only -->
+    <ul class="topnav" id="mytopnav">
+        <li><img id=logo src="img/logo-big.svg" height="50px"></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#volunteer">Volunteer</a></li>
+        <li><a href="#contact">Contact</a></li>
+
+        <!--navbar for mobile script-->
+
+    </ul>
+    <script>
+        function toggleNav() {
+            $("#helper").fadeToggle(500);
+            $("#myMenu").toggleClass("hamburger");
+            if ($("#myMenu").hasClass("hamburger")) {
+                $("#tButton").text(String.fromCharCode(9776));
+                $("#tButton").css("color", "#FACD00");
+            } else {
+                $("#tButton").css("color", "white");
+                $("#tButton").text(String.fromCharCode(10005));
+            }
+        }
+
+    </script>
+
+    <!--contains hamburger-->
+    <div class="toggle">
+        <a id="tButton" href="javascript:void(0);" onclick="toggleNav()">&#9776;</a></div>
+
+    <!--actual mobile menu-->
+    <div id="helper">
+        <div id="myMenu" class="menu hamburger">
+            <ul>
+                <li><a href=#home onclick="toggleNav()">Home</a></li>
+                <li><a href=#events onclick="toggleNav()">Events</a></li>
+                <li><a href=#about onclick="toggleNav()">About</a></li>
+                <li><a href=#volunteer onclick="toggleNav()">Volunteer</a></li>
+                <li><a href=#contact onclick="toggleNav()">Contact</a></li>
+
+            </ul>
+        </div>
+    </div>
+
+
+
+</body>
