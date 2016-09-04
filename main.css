@@ -8,6 +8,19 @@ body h1 {
 body p{
     font-family: 'Roboto', sans-serif;
 }
+.btn.btn-primary {
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    border-radius: 100px;
+    background-color: #19CEC4;
+    color: white;
+    transition: all linear 0.15s;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.btn.btn-primary:hover{
+    background-color: #FAC000;
+}
 .topnav {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
@@ -30,6 +43,7 @@ ul.topnav li {
     float: left;
 }
 .topnav a {
+    transition: all linear 0.15s;
     margin-left: 20px;
     text-decoration: none;
     color: white;
@@ -134,7 +148,7 @@ div.modal-content {
     text-decoration: none;
     cursor: pointer;
 }
-#events h1 {
+.blue{
     color: #19CEC4;
 }
 .center {
@@ -167,7 +181,7 @@ div.modal-content {
     font-size: 1.25em;
     font-family: 'Roboto', sans-serif;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 700px) {
     #helper {
         display: none;
         visibility: hidden;
@@ -181,7 +195,7 @@ div.modal-content {
         margin-right: 30px;
     }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
     ul.topnav li:not(:first-child) {
         display: none;
     }
@@ -241,8 +255,8 @@ div.modal-content {
     }
     .hamburger {}
     .modal {
-        padding-top: 85px;
+        padding-top: 55px;
         padding-left: 10px;
-    padding-right:10px;
+        padding-right:10px;
     }
 }

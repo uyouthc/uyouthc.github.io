@@ -1,15 +1,17 @@
 var main = function () {
+    //setting about image height
+    $(".aboutImg").css("height", window.innerHeight-80);
+
     //setting up mobile menu
     $("#myMenu").css("height", window.innerHeight);
 
     $("#myMenu").css("width", window.innerWidth);
-    
+
     //making events square
     var cw = $('.eventContain').width();
     $('.eventContain').css({
         'height': cw + 'px'
     });
-
 
     //setting jumbotron height
     $("#jumbotronImg").css("height", window.innerHeight);
@@ -35,8 +37,8 @@ var main = function () {
         $("#myMenu").css("height", window.innerHeight);
 
         $("#myMenu").css("width", window.innerWidth);
-        
-    
+
+
 
     });
 
