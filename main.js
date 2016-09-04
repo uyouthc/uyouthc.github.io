@@ -18,7 +18,7 @@ var main = function () {
     $("#jumbotronImg").css("height", window.innerHeight);
 
     //setting when background should change
-    var changePoint = ($('#jumbotronImg').offset().top + $('#jumbotronImg').height() / 2) - 100;
+    var changePoint = ($('#jumbotronImg').offset().top + $('#jumbotronImg').height() / 6);
 
     $(window).on('scroll', function () {
         //top of the screen

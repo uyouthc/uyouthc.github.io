@@ -33,6 +33,7 @@
                 <h1 class="whiteTitle">Hi there!</h1>
                 <p class="bp">Started in the year 2000, Unionville Youth Council comprises of a team of youth that work together to give back to the community - through coordinating community events such as Markham Idol, Leadership Conferences, Spring Carnival and volunteering around the community such as at Unionvilla Senior Home.
                 </p>
+                <span class="glyphicon glyphicon-menu-down" style="font-size: 25px;" aria-hidden="true"></span>
             </div>
         </div>
     </section>
@@ -120,16 +121,16 @@
 
     <div id="about">
         <row>
-            <div class="aboutImg col-sm-8" style="background-image:url(img/about.png);">
+            <div class="aboutImg col-sm-8" style="background-image:url(img/about.png); background-size:cover">
             </div>
-            <div class="col-sm-4 aboutImg aboutSpecial" style="margin-bottom:75px">
+            <div class="col-sm-4 aboutImg aboutSpecial" style="margin-bottom:75px; background-color:#BAF0EC">
                 <div id="aboutTag" style="display:flex;align-items:center;height:100px;font-size:30px;color:#FACD00">
                     <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                 </div>
-                <h1 class="blue">About Us</h1>
+                <h1 style="color:white;">About Us</h1>
                 <p> We believe that the community deserves the best from the youth! UYC is a council that meet once a month and we ask that members attend and volunteer regularly. We promote the wellbeing of the community, and we encourage the youth to actively participate in the community by doing community events such as the Spring Carnival, Family Day Events, helping out with Covenant House, the 30 Hour Famine, Markham Idol, Olde Tyme Christmas, Tree Planting, Fun Fairs, Leadership Conferences, and so many more!
                 </p>
-                <a class="btn btn-primary" href="events.html" style="margin-top:25px">join us</a>
+                <a class="btn btn-primary" href="events.html" style="margin-top:25px;margin-bottom:25px;">join us</a>
             </div>
         </row>
     </div>
@@ -168,19 +169,38 @@
     </div>
 
     <div id="contact">
-        <h2>Send us an email</h2>
-        <p>Don't forget to include your full name and how we can get back to you.</p>
+        <div class="container">
+            <row>
+                <div class="col-sm-10">
+                    <h2 style="color:white">Send us an email</h2>
+                    <p>Don't forget to include your full name and how we can get back to you.</p>
+                    <input id="mySubject" placeholder="subject" style="width:100%;">
+                    <div style="height:5px;"></div>
+                    <textarea id="myText" placeholder="message"></textarea>
+                    <btn class="btn btn-secondary" onclick="sendMail(); return false" style="width:120px"><span class="glyphicon glyphicon-send" aria-hidden="true"></span> Send
+                    </btn>
+                </div>
+                <div class="text-center">
+                    <h2 id="centerh" style="color:white;">-OR-</h2>
+                    <p>Connect with us on social media.</p>
+                    <row>
+                        <a href="https://www.facebook.com/Unionville.Youth.Council/?fref=ts"><img src="img/socialMedia/facebook.svg"></a>
+                    </row>
+                </div>
+            </row>
+        </div>
 
-        <input id="mySubject" placeholder="subject" style="width:100%">
-        <textarea id="myText" placeholder="message"></textarea>
-        <btn class="btn btn-secondary" onclick="sendMail(); return false" style="width:120px"><span class="glyphicon glyphicon-send" aria-hidden="true" style="color:white"></span> Send</btn>
     </div>
 
+    <footer>
+        <img src="img/logo-small.svg">
+        <p class="blue">&copy; 2016 Unionville Youth Council | Website created by Jake Xia <p>
+    </footer>
 
     <!--navbar-->
     <!--top navbar for non-mobile only -->
     <ul class="topnav" id="mytopnav">
-        <li><img id=logo src="img/logo-big.svg" height="50px"></li>
+        <li><img id="logo" src="img/logo-big.svg" height="50px"></li>
         <li><a href="#home">Home</a></li>
         <li><a href="#eventsTag">Events</a></li>
         <li><a href="#aboutTag">About</a></li>
@@ -232,7 +252,7 @@
         ]
         var vtext = [
             "As one of the events affiliated with the Christmas celebration on Unionville Main Street, Old Tyme Christmas welcomes the local community to Crosby Community Centre for a free skate, popcorn and hot chocolate.",
-            "Held at the Angus Glen Community Centre, the Spring Carnival is targeted towards younger children who are looking for some early summer fun. Activities include hair braiding, balloon animals & face painting and popcorn & cotton candy are also sold. The aim of this event is to spread awareness for certain causes or events. We also use the opportunity to collect donations for charity.",
+            "Held at the Angus Glen Community Centre, the Spring Carnival is for younger children who are looking for some early summer fun. Activities include hair braiding, balloon animals, face painting, and popcorn and cotton candy can be purchased. The aim of this event is to spread awareness for certain causes or events. We also use the opportunity to collect donations for charity.",
             "The Leadership Conference brings together markham youths of tomorrow to discuss the importance of becoming involved in the local and global community and how each person can make a difference, no matter how big or small it is. Guests are invited to speak about the leadership aspects in their jobs as well as volunteer opportunities they offer.",
             "Every April, our council works together with World Vision and thousands of people all across the world to raise money for those living in poverty. They do this while experiencing what it is like to not have anything to eat by fasting for 30 hours. During this event, both people who are struggling and our members benefit.",
             "One of our biggest events of the year, Markham Idol is a friendly singing competition for youths aged 8 to 16 years old.  We aim to provide a safe stage for youths to share their talents and express their creativity.  In this event, we hope that they develop the confidence to become exceptional leaders of tomorrow."
@@ -258,7 +278,7 @@
                 $("#myModal").fadeToggle(500);
             }
         }
-        
+
         //email script
         function sendMail() {
             var link = "mailto:markhamyouthchallenge@gmail.com" + "?subject=" + escape(document.getElementById('mySubject').value) + "&body=" + escape(document.getElementById('myText').value);
