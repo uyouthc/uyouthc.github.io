@@ -42,6 +42,7 @@
         <!-- Modal content -->
         <div class="modal-content">
             <div class="modal-header">
+                <span class = exit onclick="closeModal()">&#10005;</span>
                 <h2 id="mTitle">Modal Header</h2>
             </div>
             <div class="modal-body">
@@ -70,23 +71,16 @@
 
 
             ]
-            // Get the modal
-        var modal = document.getElementById('myModal');
-
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-
-        // When the user clicks the button, open the modal
 
         function moreInfo(num) {
             $("#mTitle").text(vtitle[num])
             $("#mText").text(vtext[num]);
             $("#myModal").fadeToggle(500);
             // modal.style.display = "block";
+        }
+        
+        function closeModal(){
+            $("#myModal").fadeToggle(500);
         }
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {

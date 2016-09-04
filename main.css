@@ -121,6 +121,19 @@ div.modal-content {
     font-size: 1.25em;
     padding: 2px 16px;
 }
+.exit {
+    color: #FACD00;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.exit:hover,
+.exit:focus {
+    color: #19CEC4;
+    text-decoration: none;
+    cursor: pointer;
+}
 #events h1 {
     color: #19CEC4;
 }
