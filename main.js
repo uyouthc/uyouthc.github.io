@@ -1,7 +1,8 @@
 var main = function () {
-    //setting about image height
-    $(".aboutImg").css("height", window.innerHeight-80);
-
+    //setting about height
+    if (window.innerHeight > 700) {
+        $(".aboutImg").css("height", window.innerHeight - 80);
+    }
     //setting up mobile menu
     $("#myMenu").css("height", window.innerHeight);
 

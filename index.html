@@ -58,7 +58,7 @@
         <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
     </div>
 
-    <section id="events" class="grid">
+    <div id="events" class="grid">
         <div class="container">
             <h1 class="blue center">Upcoming Events</h1>
             <p class="center">Here is a collection of all the events we run across the community, feel free to join us! Click on an event to veiw details.</p>
@@ -68,7 +68,7 @@
             <div class="col-sm-4">
                 <div class="eventContain" style="background-image:url(img/events/0.jpg)" onclick="moreInfo(0)">
                     <div class="eventContents">
-                        <h2 class="eventName">Olde Thyme Christmas</h2>
+                        <h2 class="eventName">Olde Tyme Christmas</h2>
 
                     </div>
                 </div>
@@ -108,24 +108,25 @@
                 </div>
             </div>
             <div class="col-sm-4">
-                <div class="eventContain" style="background-color:#19CEC4">
+                <div class="eventContain" style="background-color:#19CEC4; margin-bottom:75px">
                     <div class="eventContents">
                         <h2 class="eventName">More Comming Soon!</h2>
                     </div>
                 </div>
             </div>
         </row>
-    </section>
+    </div>
 
-    <div>
+
+    <div id="about">
         <row>
-            <div class="aboutImg col-sm-8" style="background-image:url(img/about.png); height:500px">
+            <div class="aboutImg col-sm-8" style="background-image:url(img/about.png);">
             </div>
-            <div class="col-sm-4 ">
-                <div id="eventsTag" style="display:flex;justify-content:left;padding-top:25px;font-size:30px; text-align:center;color:#FACD00">
+            <div class="col-sm-4 aboutImg aboutSpecial" style="margin-bottom:75px">
+                <div id="aboutTag" style="display:flex;align-items:center;height:100px;font-size:30px;color:#FACD00">
                     <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                 </div>
-                <h1 id="about" class="blue">About Us</h1>
+                <h1 class="blue">About Us</h1>
                 <p> We believe that the community deserves the best from the youth! UYC is a council that meet once a month and we ask that members attend and volunteer regularly. We promote the wellbeing of the community, and we encourage the youth to actively participate in the community by doing community events such as the Spring Carnival, Family Day Events, helping out with Covenant House, the 30 Hour Famine, Markham Idol, Olde Tyme Christmas, Tree Planting, Fun Fairs, Leadership Conferences, and so many more!
                 </p>
                 <a class="btn btn-primary" href="events.html" style="margin-top:25px">join us</a>
@@ -133,13 +134,56 @@
         </row>
     </div>
 
+    <div id="volunteer">
+        <div id="eventsTag" style="display:flex;justify-content:center;align-items:center;height:100px;font-size:30px; text-align:center;color:#FACD00">
+            <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span>
+        </div>
+        <div class=container>
+            <h1 class="blue center">Join Our Team</h1>
+            <row>
+                <div class="col-sm-3 text-center stats">
+                    <img src="img/joinIcons/Home.svg">
+                    <h5>give back to the<br> community</h5>
+                </div>
+                <div class="col-sm-3 text-center stats">
+                    <img src="img/joinIcons/Users.svg">
+                    <h5>meet great new <br>people</h5>
+                </div>
+                <div class="col-sm-3 text-center stats">
+                    <img src="img/joinIcons/Time.svg">
+                    <h5>get your volunteer<br> hours done</h5>
+                </div>
+                <div class="col-sm-3 text-center stats">
+                    <img src="img/joinIcons/Notebook.svg">
+                    <h5>decorate your <br>resumé</h5>
+                </div>
+            </row>
+        </div>
+        <div class="container text-center">
+            <h1 style="margin-top:30px" class="text-center blue">Apply Now</h1>
+            <p class="text-center">Below is the link to the our application. Your application will be considered, and we will get back to you as soon as possible! If you have any questions or just need some help, the quickest way to message us via facebook. Also, don't hesitate to email us.
+            </p>
+            <a class="btn btn-primary" href="https://goo.gl/forms/13LJTGopVBUSFqIs1" style="margin-top:25px">application form</a>
+        </div>
+    </div>
+
+    <div id="contact">
+        <h2>Send us an email</h2>
+        <p>Don't forget to include your full name and how we can get back to you.</p>
+
+        <input id="mySubject" placeholder="subject" style="width:100%">
+        <textarea id="myText" placeholder="message"></textarea>
+        <btn class="btn btn-secondary" onclick="sendMail(); return false" style="width:120px"><span class="glyphicon glyphicon-send" aria-hidden="true" style="color:white"></span> Send</btn>
+    </div>
+
+
     <!--navbar-->
     <!--top navbar for non-mobile only -->
     <ul class="topnav" id="mytopnav">
         <li><img id=logo src="img/logo-big.svg" height="50px"></li>
         <li><a href="#home">Home</a></li>
         <li><a href="#eventsTag">Events</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#aboutTag">About</a></li>
         <li><a href="#volunteer">Volunteer</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
@@ -155,7 +199,7 @@
             <ul>
                 <li><a href=#home onclick="toggleNav()">Home</a></li>
                 <li><a href=#eventsTag onclick="toggleNav()">Events</a></li>
-                <li><a href=#about onclick="toggleNav()">About</a></li>
+                <li><a href=#aboutTag onclick="toggleNav()">About</a></li>
                 <li><a href=#volunteer onclick="toggleNav()">Volunteer</a></li>
                 <li><a href=#contact onclick="toggleNav()">Contact</a></li>
 
@@ -180,7 +224,7 @@
 
         //modal script
         var vtitle = [
-            "Olde Thyme Christmas",
+            "Olde Tyme Christmas",
             "Spring Carnival",
             "Leadership Conference",
             "30 Hour Famine",
@@ -213,6 +257,16 @@
             if (event.target == modal) {
                 $("#myModal").fadeToggle(500);
             }
+        }
+        
+        //email script
+        function sendMail() {
+            var link = "mailto:markhamyouthchallenge@gmail.com" + "?subject=" + escape(document.getElementById('mySubject').value) + "&body=" + escape(document.getElementById('myText').value);
+
+            window.location.href = link;
+
+            document.getElementById("myText").value = "";
+            document.getElementById("mySubject").value = "";
         }
 
     </script>
