@@ -90,6 +90,14 @@ ul.topnav li {
     font-family: 'Roboto', sans-serif;
     font-size: 1.25em !important;
 }
+.chevron a{
+    text-decoration: none;
+    color: white;
+}
+.chevron a:hover{
+    text-decoration: none;
+    color: #FAC000;
+}
 #jumbotronImg {
     background-image: url(img/jumboImg.jpg);
     background-repeat: no-repeat;
