@@ -1,3 +1,10 @@
+::selection {
+  background: #FAC000;
+}
+::-moz-selection {
+  background: #FAC000;
+}
+
 body {
     margin: 0;
     overflow-x: hidden;
