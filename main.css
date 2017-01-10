@@ -322,6 +322,7 @@ footer p{
 .newsStory {
     margin-top: 25px;
     box-shadow: 5px 5px 22px #B8B8B8;
+    align-content: center;
 }
 
 .newsStory h2{
@@ -347,6 +348,15 @@ footer p{
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: justify;
+}
+
+.newsPBig{
+    margin: 10px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    font-size: 18px;
 }
 
 #sideBar{
